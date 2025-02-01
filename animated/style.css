@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    color: #fff;
+}
+/* style.css */
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#navbar{
+    display: flex;
+    height: 110px;
+    width: 100%;
+    /* background-color: rgb(173, 116, 211); */
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    padding: 0px 140px;
+    gap: 50px;
+    z-index: 999;
+}
+a{
+    text-decoration: none;
+}
+#navbar img{
+    height: 67%;
+}
+#navbar h3{
+    font-size: 17px;
+    height: 10px;
+    text-transform: uppercase;
+    font-weight: 100;
+    transition: 0.5s;
+}
+#navbar h3:hover{
+    cursor: pointer;
+    color: black;
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.227);
+
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+#page1 h1{
+    font-size: 600%;
+    text-transform: uppercase;
+    font-weight: 900;
+    position: relative;
+    color: rgba(255, 255, 255, 0.832);
+    /* color: black; */
+    top: 5%;
+}
+#page1 h1::before{
+    content: "Eat. Drink. Watch.";
+    position: absolute;
+    /* color: rgba(249, 147, 57, 0.434); */
+    color: rgba(0, 0, 0, 0.785);
+    /* color:(#dadada74); */
+    top: -5px;
+    left: -6px;
+    /* -webkit-text-stroke: 1px rgb(161 197 58); */
+    z-index: -1;
+}
+#page1 h3{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 8%;
+    margin-bottom: 10px;
+}
+#page1 p{
+    font-size: 20px;
+    font-weight: 400;
+    width: 40%;
+}
+#page2{
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+#cursor{
+    height: 2%;
+    width: 1.1%;
+    background-color: #ffab04d5;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+#cursor-blur{
+    height: 300px;
+    width: 300px;
+    background-color: #ffab0478;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(50px);
+    z-index: 9;
+}
+#scroller{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scrollertext{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 20s;
+    /* animation-delay: 1s; */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#scrollertext h4{
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 80px;
+    font-family: gilroy;
+    font-weight: 900;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px #ffab04d5;
+    margin-right: 10px;
+    color: transparent;
+    letter-spacing: 10px;
+    transition: all linear 0.3s;
+}
+#scrollertext h4:hover{
+    color: #ffab04d5;
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+#about{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: aqua; */
+    padding: 0px 50px;
+    position: relative;
+    z-index: 10;
+}
+#about img{
+    height: 70%;
+    width: 18%;
+    border-radius: 25%;
+    margin: 10px;
+    object-fit: cover;
+    object-position: -50px;
+}
+#about-us{
+    width: 50%;
+    text-align: center;
+    /* background-color: rgb(91, 232, 185); */
+}
+#about-us h3{
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+#about-us p{
+    font-size: 20px;
+    line-height: 25px;
+}
+/* #header{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    gap:5%;
+} */
+
+
+/* Add some basic responsiveness */
+@media only screen and (max-width: 800px){
+    #navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    #navbar img{
+        margin-bottom: 20px;
+    }
+    #navbar h3{
+        margin-bottom: 10px;
+    }
+}
